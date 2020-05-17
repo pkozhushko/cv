@@ -1,0 +1,26 @@
+button {
+  outline: none;
+}
+
+.btn {
+  color: $orange;
+  font: 400 17px/29px OpenSans;
+  padding: 10px 40px;
+  // border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 10;
+  transition: $transition;
+  border: 1px solid $orange;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  user-select: none; 
+
+  &:hover {
+    background-color: $orange;
+    color: $black;
+  }
+}
+
+

@@ -1,13 +1,41 @@
 <template>
-  <div>
+  <div class="main-wrapper">
+    <logo />
+    <lines-effect />
+    <share-links />
+    <get-in-touch-btn />
+    <shuffle-letter />
+    <navigation />
     <nuxt />
   </div>
 </template>
 
-<style>
+<script>
+import LinesEffect from "~/components/LinesEffect.vue";
+import Logo from "~/components/Logo.vue";
+import ShareLinks from "~/components/ShareLinks.vue";
+import GetInTouchBtn from "~/components/GetInTouchBtn.vue";
+import ShuffleLetter from "~/components/ShuffleLetter.vue";
+import Navigation from "~/components/Navigation.vue";
+
+export default {
+  components: {
+    LinesEffect,
+    ShareLinks,
+    Logo,
+    GetInTouchBtn,
+    ShuffleLetter,
+    Navigation
+  }
+};
+</script>
+
+<style lang="scss">
+@import "~/assets/_fonts.scss";
+@import "~/assets/_variables.scss";
+
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: OpenSans;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -24,32 +52,41 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+*::selection {
+  background-color: $orange;
+  color: $black;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+ul,
+ol {
+  padding: 0;
+  list-style: none;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.shuffle-letter__wrapper {
+  position: fixed;
+  top: 10px;
+  left: $column-size;
+  z-index: 10;
+  user-select: none;
+
+  & > span {
+    color: $white-second;
+    // opacity: 0.2;
+    font: 900 100px/150px Poppins;
+    text-transform: uppercase;
+
+    &:nth-child(-n + 2) {
+      color: $orange;
+      opacity: 0.2;
+    }
+  }
 }
 </style>
+

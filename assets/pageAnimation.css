@@ -1,0 +1,53 @@
+/* .page-enter-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.page-leave-active {
+  transition: opacity 0.25s ease-in;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  
+} */
+
+@media screen and (min-width: 1008px) {
+
+  /* during entering and leaving : */
+  .page-enter-active, .page-leave-active {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    transition: all .4s ease;
+  }
+
+  /* entering start */  
+  .page-enter {
+    /* overflow: hidden; */
+    left: -200px;
+    opacity: 0;
+  }
+
+  /* entering end */
+  .page-enter-to {
+    /* overflow: hidden; */
+    left: 0;
+    opacity: 1;
+  }
+
+  /* leaving start */
+  .page-leave {
+    opacity: 1;
+    /* margin-left: 0px; */
+    /* left: 0; */
+  }
+
+  /* leaving end */
+  .page-leave-to {
+    /* overflow: hidden; */
+    opacity: 0;
+    /* margin-left: 300px; */
+    /* left: 100px; */
+  }
+
+}
