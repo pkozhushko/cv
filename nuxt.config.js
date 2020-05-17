@@ -1,7 +1,10 @@
 
 export default {
   mode: 'spa',
-  router: { base: '/cv/' },
+  router: { 
+    base: '/cv/',
+    mode : 'hash' 
+  },
   /*
   ** Headers of the page
   */
