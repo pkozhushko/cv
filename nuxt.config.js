@@ -1,9 +1,9 @@
 
 export default {
-  mode: 'spa',
-  router: { 
+  mode: 'universal',
+  router: {
     base: '/cv/',
-    mode : 'hash' 
+    mode: 'history'
   },
   /*
   ** Headers of the page
@@ -34,7 +34,7 @@ export default {
   */
   plugins: [
     '~/plugins/eventBus.js',
-    {src:"~plugins/vue-particles",ssr:false}
+    { src: "~plugins/vue-particles", ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,11 +49,24 @@ export default {
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+  extend(config, { isDev, isClient }) {
+    config.module.rules.forEach(rule => {
+      if (String(rule.test) === String(/\.(png|jpe?g|gif|svg|webp)$/)) {
+        // add a second loader when loading images
+        rule.use.push({
+          loader: 'image-webpack-loader',
+          options: {
+            svgo: {
+              plugins: [
+                // use these settings for internet explorer for proper scalable SVGs
+                // https://css-tricks.com/scale-svg/
+                { removeViewBox: false },
+                { removeDimensions: true }
+              ]
+            }
+          }
+        })
+      }
+    })
   }
 }
