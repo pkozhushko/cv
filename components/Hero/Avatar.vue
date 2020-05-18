@@ -1,6 +1,7 @@
 <template>
   <div class="avatar__wrapper">
-    <img src="~/static/icons/main.jpg" class="avatar" alt="avatar" />
+    <section class="hero">
+    </section>
   </div>
 </template>
 
@@ -10,15 +11,27 @@
 .avatar__wrapper {
   position: absolute;
   top: 0px;
-  right: 0;
-  max-height: 100vh;
+  right: 0px;
+  height: 100vh;
+  width: 70vw;
 
-  & > .avatar {
-    max-width: 100%;
-    max-height: 900px;
-    width: auto;
+  &>.hero {
+    width: 100%;
+    height: 100%;
+    background-image: url("./../../static/icons/main.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
     filter: brightness(80%);
   }
 }
+
+@media screen and ( max-width: 1500px ) {
+  .avatar__wrapper {
+    width: 60vw;
+  }
+}
+
+
+
 </style>
 

@@ -1,13 +1,5 @@
 <template>
   <div class="container">
-    <!-- <div class="text_block">
-      So are you looking for a professional, communicative & punctual software engineer with extensive web development skills?
-
-If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.
-
-Send me an email:
-    </div>-->
-
     <figure>
       <img class="image" src="../../static/icons/avatarMain.jpg" alt="img" />
     </figure>
@@ -262,8 +254,8 @@ figure {
   position: absolute;
   top: 210px;
   left: 400px;
-  width: 520px;
-  height: 700px;
+  width: 525px;
+  height: 600px;
   overflow: hidden;
   z-index: 10;
   animation: slideFromLeft 0.8s ease-in-out;
@@ -296,7 +288,6 @@ figure {
 .image {
   position: absolute;
   width: 100%;
-  margin-top: -100px;
 }
 
 @keyframes slideFromTop {

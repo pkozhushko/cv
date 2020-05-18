@@ -16,17 +16,22 @@
   color: $white;
   font: 900 47px/72px Poppins;
   position: absolute;
-  bottom: 240px;
-  left: 380px;
-  height: 360px;
+  bottom: 35%;
+  left: 20%;
 
   & > h2 {
     padding-bottom: 30px;
   }
-
+  
   & > .btn {
     position: absolute;
-    bottom: 0px;
+    bottom: -100px;
+  }
+}
+
+@media screen and ( max-width: 1450px ) {
+  .hero-text__wrapper {
+    font: 900 37px/50px Poppins;
   }
 }
 </style>

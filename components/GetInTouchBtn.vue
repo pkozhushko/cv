@@ -106,5 +106,10 @@
     transform: translateX(-15%);
   }
 }
+
+
+@media screen and ( max-width: 1400px ) {
+  
+}
 </style>
 

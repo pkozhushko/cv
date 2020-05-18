@@ -88,5 +88,11 @@ ol {
     }
   }
 }
+
+@media screen and ( max-width: 1450px ) {
+  .shuffle-letter__wrapper > span {
+    font: 900 70px/120px Poppins;
+  }
+}
 </style>
 

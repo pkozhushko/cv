@@ -174,5 +174,14 @@ export default {
   animation: 0.5s ease-out 0.3s 1 slideInFromRight;
   animation-fill-mode:forwards;
 }
+
+
+@media screen and ( max-width: 1450px ) {
+  .dotted {
+    width: 650px;
+    height: 450px;
+    left: 400px;
+  }
+}
 </style>
 
