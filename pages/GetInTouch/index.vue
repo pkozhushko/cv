@@ -244,18 +244,17 @@ export default {
   }
 }
 
-.wrapp {
-  z-index: 20;
-
-  &>.title {
+.title {
     position: absolute;
     top: 510px;
-    left: 50%;
+    left: 60%;
     font: 900 92px/65px Poppins;
     letter-spacing: -4px;
     color: #fff;
-    opacity: 0.4;
+    opacity: 0.8;
     animation: slideFromTop 1.5s ease-in-out;
+    animation-fill-mode: both;
+
     &>span {
       position: absolute;
       top: 80%;
@@ -264,12 +263,11 @@ export default {
       font-style: italic;
     }
   }
-}
 
 .form-wrapper {
   position: relative;
-  left: 350px;
-  top: 290px;
+  left: 25%;
+  top: 270px;
   width: 540px;
   display: flex;
   flex-direction: column;
@@ -373,25 +371,9 @@ export default {
 .btn {
   width: 270px;
   margin: 0 auto;
-  background: $gray;
+  // background: $gray;
 }
 
-.block__one {
-  position: absolute;
-  top: 200px;
-  right: 480px;
-  width: 160px;
-  height: 140px;
-  background: rgba(0, 3, 5, 0.2);
-}
-.block__two {
-  position: absolute;
-  bottom: 140px;
-  right: 130px;
-  width: 250px;
-  height: 100px;
-  background: rgba(1, 8, 12, 0.685);
-}
 .dotted {
   position: absolute;
   bottom: 160px;
@@ -460,7 +442,24 @@ export default {
     opacity: 0;
   }
   100% {
-    top: 500px;
+  }
+}
+
+
+@media screen and ( max-width: 1450px ) {
+  .form-wrapper {
+    left: 20%;
+    top: 170px;
+    width: 470px;
+  }
+  .dotted {
+    height: 400px;
+    right: 10%;
+  }
+  .title {
+    top: 400px;
+    left: 62%;
+    font: 900 72px/65px Poppins;
   }
 }
 </style>

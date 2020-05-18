@@ -1,53 +1,72 @@
 <template>
   <div class="container">
     <figure>
-      <img class="image" src="../../static/icons/avatarMain.jpg" alt="img" />
+      <div class="image"></div>
     </figure>
     <div class="info-header">
-        <h2>Are you looking for</h2>
-        <h2>
-          a
-          <span>front-end</span> developer?
-        </h2>
-      </div>
-      
-        <div class="about-info" >
-          <transition name="slideRight" mode="out-in">
-            <div class="about-info__body" v-if="selected == 'menu'">
-              <p>If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.</p>
-              <p>I am professional, communicative & punctual software engineer with extensive web development skills.</p>
+      <h2>Are you looking for</h2>
+      <h2>
+        a
+        <span>front-end</span> developer?
+      </h2>
+    </div>
 
-              <div class="buttons">
-                <a href="docs/kozhushko_cv.pdf" class="btn download-btn" download></a>
-                <nuxt-link to="/getInTouch" class="btn message-btn"></nuxt-link>
-              </div>
+    <div class="about-info">
+      <transition name="slideRight" mode="out-in">
+        <div class="about-info__body" v-if="selected == 'menu'">
+          <p>If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.</p>
+          <p>I am professional, communicative & punctual software engineer with extensive web development skills.</p>
 
-              <ul class="items">
-                <li class="item" @click="goTo('education')">
-                  <span>Education</span>
-                </li>
-                <li class="item" @click="goTo('workExperience')">
-                  <span>Work experience</span>
-                </li>
-                <li class="item" @click="goTo('skills')">
-                  <span>Skills</span>
-                </li>
-              </ul>
-            </div>
-          </transition>
-          <transition-group name="slide" mode="out-in">
-            <education key="education" @back="goTo('menu')" v-if="selected == 'education'" class="about-info__body" />
-            <work-experience key="work-experience" @back="goTo('menu')" v-if="selected == 'workExperience'" class="about-info__body" />
-            <hobbies key="hobbies" @back="goTo('menu')" v-if="selected == 'hobbies'" class="about-info__body" />
-            <skills key="skills" @back="goTo('menu')" v-if="selected == 'skills'" class="about-info__body" />
-          </transition-group>
-          
+          <div class="buttons">
+            <a href="docs/kozhushko_cv.pdf" class="btn download-btn" download></a>
+            <nuxt-link to="/getInTouch" class="btn message-btn"></nuxt-link>
+          </div>
+
+          <ul class="items">
+            <li class="item" @click="goTo('education')">
+              <span>Education</span>
+            </li>
+            <li class="item" @click="goTo('workExperience')">
+              <span>Work experience</span>
+            </li>
+            <li class="item" @click="goTo('skills')">
+              <span>Skills</span>
+            </li>
+          </ul>
         </div>
+      </transition>
+      <transition-group name="slide" mode="out-in">
+        <education
+          key="education"
+          @back="goTo('menu')"
+          v-if="selected == 'education'"
+          class="about-info__body"
+        />
+        <work-experience
+          key="work-experience"
+          @back="goTo('menu')"
+          v-if="selected == 'workExperience'"
+          class="about-info__body"
+        />
+        <hobbies
+          key="hobbies"
+          @back="goTo('menu')"
+          v-if="selected == 'hobbies'"
+          class="about-info__body"
+        />
+        <skills
+          key="skills"
+          @back="goTo('menu')"
+          v-if="selected == 'skills'"
+          class="about-info__body"
+        />
+      </transition-group>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 import Education from "~/components/About/Education.vue";
 import Skills from "~/components/About/Skills.vue";
 import WorkExperience from "~/components/About/WorkExperience.vue";
@@ -57,10 +76,10 @@ export default {
     Education,
     WorkExperience
   },
-  data(){
+  data() {
     return {
-      selected: 'menu'
-    }
+      selected: "menu"
+    };
   },
   mounted() {
     this.$bus.$emit("shuffle", "//about");
@@ -68,7 +87,7 @@ export default {
   methods: {
     goTo(key) {
       this.selected = key;
-    },
+    }
   }
 };
 </script>
@@ -91,42 +110,42 @@ export default {
   overflow: hidden !important;
 }
 .info-header {
-    width: 900px;
-    position: absolute;
-    top: 115px;
-    right: 80px;
-    overflow: hidden;
-    text-align: right;
-    padding: 20px;
-    opacity: 0.3;
-    z-index: 10;
-    animation: slideFromTop 1.5s ease-in-out;
+  width: 900px;
+  position: absolute;
+  top: 115px;
+  right: 80px;
+  overflow: hidden;
+  text-align: right;
+  padding: 20px;
+  opacity: 0.3;
+  z-index: 10;
+  animation: slideFromTop 1.5s ease-in-out;
 
-    & > h2 {
-      letter-spacing: -4px;
-      color: $white;
-      font: 900 92px/65px Poppins;
+  & > h2 {
+    letter-spacing: -4px;
+    color: $white;
+    font: 900 92px/65px Poppins;
 
-      & > span {
-        padding: 0 10px;
-        font-style: italic;
-        color: $orange;
-      }
+    & > span {
+      padding: 0 10px;
+      font-style: italic;
+      color: $orange;
     }
+  }
 }
 .about-info {
   position: absolute;
-  top: 295px;
-  left: 470px;
-  width: 1300px;
-  height: 550px;
+  top: 30%;
+  left: 25%;
+  width: 70%;
+  height: 58%;
   background: $gray;
   color: #fff;
   z-index: 1;
-  padding-left: 500px;
+  padding-left: 525px;
   overflow: hidden;
 
-  &__body { 
+  &__body {
     height: 100%;
     width: 100%;
     padding-top: 70px;
@@ -139,11 +158,11 @@ export default {
       font: 400 19px/29px OpenSans;
     }
   }
-  &__footer {
-    padding-bottom: 70px;
-    padding-right: 70px;
-    display: flex;
-  }
+  // &__footer {
+  //   padding-bottom: 70px;
+  //   padding-right: 70px;
+  //   display: flex;
+  // }
 }
 
 .buttons {
@@ -213,7 +232,7 @@ export default {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
-  
+
   & > .item {
     white-space: nowrap;
     width: min-content;
@@ -286,8 +305,11 @@ figure {
   }
 }
 .image {
-  position: absolute;
   width: 100%;
+  height: 100%;
+  background-image: url("./../../static/icons/avatarMain.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 @keyframes slideFromTop {
@@ -295,77 +317,81 @@ figure {
     top: -100px;
     opacity: 0;
   }
-  100% {
-    top: 115px;
-  }
 }
 @keyframes slideFromLeft {
   0% {
     left: 0px;
     opacity: 0;
   }
-  100% {
-    opacity: 1;
-    left: 400px;
-  }
-}
-
-
-
-
-.company {
-  backface-visibility: hidden;
-  z-index: 1;
-}
-
-/* moving */
-.company-move {
-  transition: all 600ms ease-in-out 50ms;
-}
-
-/* appearing */
-.company-enter-active {
-  transition: all 400ms ease-out;
-}
-
-/* disappearing */
-.company-leave-active {
-  transition: all 200ms ease-in;
-  position: absolute;
-  z-index: 0;
-  transform: translateX(100%);
-}
-
-/* appear at / disappear to */
-.company-enter,
-.company-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
 }
 
 .slideRight-enter-active,
-    .slideRight-leave-active
-    {
-      transition: transform 0.4s ease;
-    }
+.slideRight-leave-active {
+  transition: transform 0.4s ease;
+}
 
-    .slideRight-enter,
-    .slideRight-leave-to {
-        transform: translateX(-100%);
-        // transition: all 400ms ease-in 0s
-    }
+.slideRight-enter,
+.slideRight-leave-to {
+  transform: translateX(-100%);
+  // transition: all 400ms ease-in 0s
+}
 
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.4s ease;
+}
 
-    .slide-enter-active,
-    .slide-leave-active
-    {
-      transition: all 0.4s ease;
-    }
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
+  // transition: all 400ms ease-in 0s
+}
 
-    .slide-enter,
-    .slide-leave-to {
-        transform: translateX(100%);
-        // transition: all 400ms ease-in 0s
+@media screen and (max-width: 1450px) {
+  figure {
+    top: 180px;
+    left: 300px;
+    width: 400px;
+    height: 480px;
+    &:before {
+      font: 400 12px/20px OpenSans;
+      width: 340px;
     }
+  }
+
+  .about-info {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 70%;
+    height: 63%;
+    padding-left: 400px;
+
+    &__body {
+      padding-top: 50px;
+      padding-right: 50px;
+      & > p {
+        font: 400 15px/24px OpenSans;
+      }
+    }
+  }
+
+  .info-header {
+    top: 70px;
+    right: 30px;
+
+    & > h2 {
+      font: 900 60px/65px Poppins;
+
+      & > span {
+        padding: 0 6px;
+        font-style: italic;
+        color: $orange;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+}
 </style>
 

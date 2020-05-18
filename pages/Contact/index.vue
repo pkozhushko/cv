@@ -14,8 +14,9 @@
       ></vue-particles>
     </client-only>
     <div class="contact-wrapper">
-      <div class="name">petro.kozhushko</div>
+      <!-- <div class="name">petro.kozhushko</div> -->
       <div class="info">
+        <!-- <div class="name">petro.kozhushko</div> -->
         <div class="phone">
           <span>phone:</span>
           <a class="link" href="tel:+380631734957">+380631734957</a>
@@ -64,7 +65,7 @@ export default {
           name: "linkedin",
           url: "https://www.linkedin.com/in/pkozhushko"
         }
-      ],     
+      ]
     };
   },
   methods: {
@@ -83,7 +84,6 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  bottom: 80px;
   width: 100%;
   height: calc(100% - 80px);
   overflow: hidden;
@@ -108,41 +108,49 @@ export default {
   height: 100%;
   bottom: 0px;
   left: 0px;
-  & > .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.info {
+  width: 800px;
+  height: 400px;
+  background: $white-second;
+  animation: leftSlideFirst 1.5s ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+
+  &:before {
+    content: "petro.kozhushko";
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: -70px;
+    display: block;
     font: 900 45px/55px Poppins;
     color: $white-second;
     width: min-content;
     transform: rotate(-90deg);
-    position: absolute;
-    bottom: 400px;
     user-select: none;
     animation: leftSlideSecond 1.2s ease-in-out;
     animation-delay: 1.5s;
     animation-fill-mode: both;
     z-index: 10;
   }
-  & > .info {
-    position: absolute;
-    bottom: 229px;
-    width: 800px;
-    height: 400px;
-    background: $white-second;
-    // opacity: 0.5;
-    animation: leftSlideFirst 1.5s ease-in-out;
-    animation-delay: 0.6s;
-    animation-fill-mode: both;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-  }
 }
 
 .phone,
 .email,
 .address {
-  margin-left: 30%;
+  margin-left: 25%;
   position: relative;
   padding: 30px 45px;
   width: 500px;
@@ -159,7 +167,7 @@ export default {
   & > span {
     display: inline-block;
     width: 20%;
-    font: 400 15px/20px OpenSans;
+    font: 300 15px/20px OpenSans;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -204,8 +212,6 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
   justify-content: center;
   & > .box {
     width: 30px;
@@ -235,13 +241,16 @@ export default {
       background: #363636;
     }
     & > .instagram {
-      background: url("../../static/icons/instagram_light.svg") center center no-repeat;
+      background: url("../../static/icons/instagram_light.svg") center center
+        no-repeat;
     }
     & > .facebook {
-      background: url("../../static/icons/facebook_light.svg") center center no-repeat;
+      background: url("../../static/icons/facebook_light.svg") center center
+        no-repeat;
     }
     & > .linkedin {
-      background: url("../../static/icons/linkedin_light.svg") center center no-repeat;
+      background: url("../../static/icons/linkedin_light.svg") center center
+        no-repeat;
     }
 
     &:hover .instagram {
@@ -266,22 +275,28 @@ export default {
 
 @keyframes leftSlideFirst {
   0% {
-    left: -600px;
+    margin-left: -100%;
     opacity: 0;
   }
   100% {
     opacity: 1;
-    left: 450px;
   }
 }
 @keyframes leftSlideSecond {
   0% {
-    left: -200px;
+    left: -400px;
     opacity: 0;
   }
   100% {
     opacity: 1;
-    left: 200px;
+    left: -70px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .info {
+    width: 650px;
+    height: 400px;
   }
 }
 </style>
