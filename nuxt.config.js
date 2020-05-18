@@ -1,9 +1,16 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   router: {
     base: '/cv/',
-    mode: 'history'
+    mode: 'hash',
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
+    }
   },
   /*
   ** Headers of the page
