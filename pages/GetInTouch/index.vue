@@ -446,6 +446,8 @@ export default {
 }
 
 
+
+
 @media screen and ( max-width: 1450px ) {
   .form-wrapper {
     left: 20%;
@@ -460,6 +462,17 @@ export default {
     top: 400px;
     left: 62%;
     font: 900 72px/65px Poppins;
+  }
+}
+@media screen and ( max-width: 1450px ) and ( min-height: 1000px) {
+  .form-wrapper {
+    top: 300px;
+  }
+}
+
+@media screen and ( max-width: 1024px) {
+  .form-wrapper {
+    left: 13%;
   }
 }
 </style>

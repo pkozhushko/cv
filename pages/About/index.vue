@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <figure>
+    <figure class="photo-wrapper">
       <div class="image"></div>
     </figure>
-    <div class="info-header">
+
+    <div class="header-question">
       <h2>Are you looking for</h2>
       <h2>
         a
@@ -11,9 +12,9 @@
       </h2>
     </div>
 
-    <div class="about-info">
+    <div class="main-block">
       <transition name="slideRight" mode="out-in">
-        <div class="about-info__body" v-if="selected == 'menu'">
+        <div class="main-block__info" v-if="selected == 'menu'">
           <p>If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.</p>
           <p>I am professional, communicative & punctual software engineer with extensive web development skills.</p>
 
@@ -40,25 +41,25 @@
           key="education"
           @back="goTo('menu')"
           v-if="selected == 'education'"
-          class="about-info__body"
+          class="main-block__info"
         />
         <work-experience
           key="work-experience"
           @back="goTo('menu')"
           v-if="selected == 'workExperience'"
-          class="about-info__body"
+          class="main-block__info"
         />
         <hobbies
           key="hobbies"
           @back="goTo('menu')"
           v-if="selected == 'hobbies'"
-          class="about-info__body"
+          class="main-block__info"
         />
         <skills
           key="skills"
           @back="goTo('menu')"
           v-if="selected == 'skills'"
-          class="about-info__body"
+          class="main-block__info"
         />
       </transition-group>
     </div>
@@ -109,7 +110,8 @@ export default {
   z-index: 1;
   overflow: hidden !important;
 }
-.info-header {
+.header-question {
+  //here is
   width: 900px;
   position: absolute;
   top: 115px;
@@ -133,19 +135,20 @@ export default {
     }
   }
 }
-.about-info {
+.main-block {           //here is
   position: absolute;
   top: 30%;
   left: 25%;
   width: 70%;
-  height: 58%;
+  height: 60%;
   background: $gray;
   color: #fff;
   z-index: 1;
-  padding-left: 525px;
+  padding-left: 28%;
+  // padding-left: 525px;
   overflow: hidden;
 
-  &__body {
+  &__info {
     height: 100%;
     width: 100%;
     padding-top: 70px;
@@ -158,11 +161,6 @@ export default {
       font: 400 19px/29px OpenSans;
     }
   }
-  // &__footer {
-  //   padding-bottom: 70px;
-  //   padding-right: 70px;
-  //   display: flex;
-  // }
 }
 
 .buttons {
@@ -269,12 +267,12 @@ export default {
   }
 }
 
-figure {
+.photo-wrapper {
   position: absolute;
-  top: 210px;
-  left: 400px;
-  width: 525px;
-  height: 600px;
+  top: 26%;
+  left: 22%;
+  width: 27%;
+  height: 60%;
   overflow: hidden;
   z-index: 10;
   animation: slideFromLeft 0.8s ease-in-out;
@@ -327,12 +325,13 @@ figure {
 
 .slideRight-enter-active,
 .slideRight-leave-active {
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease-in-out;
 }
 
 .slideRight-enter,
 .slideRight-leave-to {
   transform: translateX(-100%);
+  // opacity: 0;
   // transition: all 400ms ease-in 0s
 }
 
@@ -344,54 +343,184 @@ figure {
 .slide-enter,
 .slide-leave-to {
   transform: translateX(100%);
+  opacity: 0;
   // transition: all 400ms ease-in 0s
 }
 
-@media screen and (max-width: 1450px) {
-  figure {
-    top: 180px;
-    left: 300px;
-    width: 400px;
-    height: 480px;
-    &:before {
-      font: 400 12px/20px OpenSans;
-      width: 340px;
-    }
-  }
+// @media screen and (max-width: 1400px) {
+//   .photo-wrapper {
+//     top: 180px;
+//     left: 20%;
+//     width: 400px;
+//     height: 480px;
+//     &:before {
+//       font: 400 12px/20px OpenSans;
+//       width: 340px;
+//     }
+//   }
 
-  .about-info {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 70%;
-    height: 63%;
-    padding-left: 400px;
+//   .main-block {
+//     position: absolute;
+//     top: 25%;
+//     left: 25%;
+//     width: 70%;
+//     height: 63%;
+//     padding-left: 400px;
 
-    &__body {
-      padding-top: 50px;
-      padding-right: 50px;
-      & > p {
-        font: 400 15px/24px OpenSans;
-      }
-    }
-  }
+//     &__info {
+//       padding-top: 50px;
+//       padding-right: 50px;
+//       & > p {
+//         font: 400 15px/24px OpenSans;
+//       }
+//     }
+//   }
 
-  .info-header {
-    top: 70px;
-    right: 30px;
+//   .header-question {
+//     top: 70px;
+//     right: 30px;
 
-    & > h2 {
-      font: 900 60px/65px Poppins;
+//     & > h2 {
+//       font: 900 60px/65px Poppins;
 
-      & > span {
-        padding: 0 6px;
-        font-style: italic;
-        color: $orange;
-      }
+//       & > span {
+//         padding: 0 6px;
+//         font-style: italic;
+//         color: $orange;
+//       }
+//     }
+//   }
+// }
+// @media screen and (min-width: 1400px) {
+//   .photo-wrapper {
+//     top: 220px;
+//     left: 20%;
+//     width: 450px;
+//     height: 540px;
+//     &:before {
+//       font: 400 12px/20px OpenSans;
+//       width: 360px;
+//     }
+//   }
+//   .header-question {
+//     top: 90px;
+//     right: 30px;
+//   }
+//   .main-block {
+//     position: absolute;
+//     top: 28%;
+//     left: 25%;
+//     width: 70%;
+//     height: 63%;
+//     padding-left: 430px;
+
+//     &__info {
+//       padding-top: 90px;
+//       padding-right: 50px;
+//       & > p {
+//         font: 400 18px/24px OpenSans;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 1700px) and (min-height: 1000px) {
+//   // .header-question {
+//   //   right: 20px;
+
+//   //   & > h2 {
+//   //     font: 900 50px/65px Poppins;
+//   //   }
+//   // }
+//   .photo-wrapper {
+//     top: 250px;
+//     left: 20%;
+//  }
+// }
+
+// @media screen and (min-width: 1900px) and (min-height: 1000px) {
+//  .photo-wrapper {
+//    top: 300px;
+//  }
+// }
+
+@media screen and (max-height: 900px) {
+  .header-question {
+    top: 10%;
+    &> h2 {
+      font: 900 77px/65px Poppins;
     }
   }
 }
-@media screen and (max-width: 1439px) {
+
+@media screen and (max-height: 865px) {
+  .header-question {
+    top: 55px;
+    &>h2 {
+      font: 900 62px/65px Poppins;
+    }
+  }
+    
+
+  .main-block {       
+    top: 20%;
+    height: 70%;
+
+    &__info p {
+        font: 400 16px/26px OpenSans;
+      }
+  }
+
+  .photo-wrapper {
+    top: 28%;
+    left: 18%;
+    width: 30%;
+  }
+}
+
+
+
+@media screen and (max-width: 1500px) { 
+  .photo-wrapper {
+    &:before { width: 360px; }
+    &:after { left: 20px; }
+  }
+}
+@media screen and (max-width: 1300px) { 
+  .photo-wrapper {
+    top: 26%;
+    left: 13%;
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1200px) {           // 1024x768, 1152x864
+  .header-question {
+    right: 40px;
+    &>h2 {
+      font: 900 52px/65px Poppins;
+    }
+  }
+
+  .main-block {       
+    top: 20%;
+    width: 80%;
+    left: 17%;
+
+    &__info p {
+        font: 400 17px/25px OpenSans;
+      }
+  }
+
+  .photo-wrapper {
+    top: 28%;
+    // left: 22%;
+    left: 10%;
+    width: 32%;
+    height: 58%;
+
+    &:before { display: none; }
+    &:after { display: none; }
+  }
 }
 </style>
 

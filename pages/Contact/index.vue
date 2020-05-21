@@ -14,9 +14,7 @@
       ></vue-particles>
     </client-only>
     <div class="contact-wrapper">
-      <!-- <div class="name">petro.kozhushko</div> -->
       <div class="info">
-        <!-- <div class="name">petro.kozhushko</div> -->
         <div class="phone">
           <span>phone:</span>
           <a class="link" href="tel:+380631734957">+380631734957</a>
@@ -106,8 +104,8 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0px;
-  left: 0px;
+  bottom: -40px;
+  left: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,33 +211,15 @@ export default {
   height: 100%;
   display: flex;
   justify-content: center;
+  
   & > .box {
     width: 30px;
     height: 30px;
     position: relative;
     cursor: pointer;
     margin: 20px;
+    z-index: 10;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      -webkit-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out;
-    }
-
-    & > .icon {
-      display: block;
-      width: 100%;
-      height: 100%;
-      -webkit-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-      background: #363636;
-    }
     & > .instagram {
       background: url("../../static/icons/instagram_light.svg") center center
         no-repeat;
@@ -264,6 +244,14 @@ export default {
     }
   }
 }
+.icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      background: #363636;
+    }
 @keyframes slideFromBottom {
   0% {
     bottom: -100%;
@@ -296,7 +284,10 @@ export default {
 @media screen and (max-width: 1450px) {
   .info {
     width: 650px;
-    height: 400px;
+    height: 320px;
+    &:before {
+      font: 900 36px/45px Poppins;
+    }
   }
 }
 </style>

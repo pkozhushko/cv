@@ -1,8 +1,11 @@
 <template>
   <section class="container">
     <div class="coordinates">
-      <div class="coordinates__text">{{ coordinates.x }} {{ coordinates.y}}</div>
-      <div>based in {{ city }}</div>
+      <div class="coordinates__text">
+        <p>{{ coordinates.x }}</p>
+        <p>{{ coordinates.y}}</p>
+      </div>
+      <div class="city">based in {{ city }}</div>
     </div>
     <avatar class="animation-second" />
     <hero-text class="animation-first" />
@@ -51,18 +54,18 @@ export default {
   position: absolute;
   top: calc(#{$column-size/2});
   right: $column-size;
-  color: $orange;
+  color: #fff;
   opacity: 0.8;
-  font: 400 13px/19px OpenSans;
+  font: 500 13px/20px OpenSans;
   letter-spacing: 9px;
   z-index: 5;  
-  height: 19px;
+  height: 40px;
   overflow-y: hidden;  
 
   &:before {
     content: '';
     width: 20px;
-    height: 2px;
+    height: 1px;
     background: $orange;
     position: absolute;
     left: 0px;
@@ -79,9 +82,11 @@ export default {
   }
 
   &:hover .coordinates__text {
-    margin-top: -19px;
+    margin-top: -40px;
   }
-
+  &>.city {
+    line-height: 40px;
+  }
   
 }
 .dotted {

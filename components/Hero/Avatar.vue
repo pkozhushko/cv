@@ -31,7 +31,11 @@
   }
 }
 
-
+@media screen and (max-width: 1700px) {
+ .avatar__wrapper {
+    width: 65vw;
+  }
+}
 
 </style>
 
