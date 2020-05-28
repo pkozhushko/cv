@@ -119,6 +119,7 @@ export default {
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
 @import "~/assets/about.scss";
+@import "~/assets/media/about.scss";
 
 
 .skills-wrapper {

@@ -14,9 +14,13 @@
 
     <div class="main-block">
       <transition name="slideRight" mode="out-in">
+        
         <div class="main-block__info" v-if="selected == 'menu'">
-          <p>If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.</p>
-          <p>I am professional, communicative & punctual software engineer with extensive web development skills.</p>
+          <div class="text">
+            <p>If you have an application you are interested in developing, a problem that needs solving or a project that needs rescuing, I'd love to help you with it.</p>
+            <p>I am professional, communicative & punctual software engineer with extensive web development skills.</p>
+          </div>
+          
 
           <div class="buttons">
             <a href="docs/kozhushko_cv.pdf" class="btn download-btn" download></a>
@@ -96,6 +100,8 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
+@import "~/assets/media/about.scss";
+
 .btn-menu {
   position: absolute;
   bottom: 70px;
@@ -111,10 +117,9 @@ export default {
   overflow: hidden !important;
 }
 .header-question {
-  //here is
-  width: 900px;
+  max-width: 900px;
   position: absolute;
-  top: 115px;
+  top: 125px;
   right: 80px;
   overflow: hidden;
   text-align: right;
@@ -122,12 +127,13 @@ export default {
   opacity: 0.3;
   z-index: 10;
   animation: slideFromTop 1.5s ease-in-out;
+  font-family: Poppins;
+  font-size: 60px;
+  line-height: 0.7;
 
   & > h2 {
     letter-spacing: -4px;
     color: $white;
-    font: 900 92px/65px Poppins;
-
     & > span {
       padding: 0 10px;
       font-style: italic;
@@ -135,7 +141,7 @@ export default {
     }
   }
 }
-.main-block {           //here is
+.main-block {
   position: absolute;
   top: 30%;
   left: 25%;
@@ -144,36 +150,44 @@ export default {
   background: $gray;
   color: #fff;
   z-index: 1;
-  padding-left: 28%;
-  // padding-left: 525px;
   overflow: hidden;
+  display: flex;
 
   &__info {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 70%;
     height: 100%;
-    width: 100%;
-    padding-top: 70px;
-    padding-right: 70px;
+    // padding-top: 70px;
+    // padding-right: 70px;
+    padding: 70px 70px 0 70px;
     display: flex;
     flex-direction: column;
+    font-size: 19px;
     & > p {
       color: $white;
       opacity: 0.6;
-      font: 400 19px/29px OpenSans;
     }
   }
 }
-
+.text {
+  width: 100%;
+}
 .buttons {
   margin-top: 20px;
   height: 51px;
   display: flex;
   justify-content: space-between;
+  font-size: 17px;
+  line-height: 2;
 
   & > .btn {
     text-align: center;
     width: 50%;
     height: 100%;
     margin: 0 10px;
+    font: inherit!important;
   }
 
   & > .download-btn,
@@ -225,24 +239,28 @@ export default {
   }
 }
 .items {
-  position: absolute;
-  bottom: 80px;
+  // position: absolute;
+  // bottom: 80px;
+  margin-top: 80px;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
-
-  & > .item {
+}
+.item {
     white-space: nowrap;
     width: min-content;
     position: relative;
     cursor: pointer;
+    font-family: Poppins;
+    font-size: 40px;
+    line-height: 50px;
 
     & > span {
       text-transform: uppercase;
       transition: $transition;
       color: #aaaaaa;
       opacity: 0.4;
-      font: 900 40px/50px Poppins;
+      
     }
     &:after {
       content: "";
@@ -265,12 +283,11 @@ export default {
       }
     }
   }
-}
 
 .photo-wrapper {
   position: absolute;
   top: 26%;
-  left: 22%;
+  left: 19%;
   width: 27%;
   height: 60%;
   overflow: hidden;
@@ -331,8 +348,6 @@ export default {
 .slideRight-enter,
 .slideRight-leave-to {
   transform: translateX(-100%);
-  // opacity: 0;
-  // transition: all 400ms ease-in 0s
 }
 
 .slide-enter-active,
@@ -344,183 +359,8 @@ export default {
 .slide-leave-to {
   transform: translateX(100%);
   opacity: 0;
-  // transition: all 400ms ease-in 0s
-}
-
-// @media screen and (max-width: 1400px) {
-//   .photo-wrapper {
-//     top: 180px;
-//     left: 20%;
-//     width: 400px;
-//     height: 480px;
-//     &:before {
-//       font: 400 12px/20px OpenSans;
-//       width: 340px;
-//     }
-//   }
-
-//   .main-block {
-//     position: absolute;
-//     top: 25%;
-//     left: 25%;
-//     width: 70%;
-//     height: 63%;
-//     padding-left: 400px;
-
-//     &__info {
-//       padding-top: 50px;
-//       padding-right: 50px;
-//       & > p {
-//         font: 400 15px/24px OpenSans;
-//       }
-//     }
-//   }
-
-//   .header-question {
-//     top: 70px;
-//     right: 30px;
-
-//     & > h2 {
-//       font: 900 60px/65px Poppins;
-
-//       & > span {
-//         padding: 0 6px;
-//         font-style: italic;
-//         color: $orange;
-//       }
-//     }
-//   }
-// }
-// @media screen and (min-width: 1400px) {
-//   .photo-wrapper {
-//     top: 220px;
-//     left: 20%;
-//     width: 450px;
-//     height: 540px;
-//     &:before {
-//       font: 400 12px/20px OpenSans;
-//       width: 360px;
-//     }
-//   }
-//   .header-question {
-//     top: 90px;
-//     right: 30px;
-//   }
-//   .main-block {
-//     position: absolute;
-//     top: 28%;
-//     left: 25%;
-//     width: 70%;
-//     height: 63%;
-//     padding-left: 430px;
-
-//     &__info {
-//       padding-top: 90px;
-//       padding-right: 50px;
-//       & > p {
-//         font: 400 18px/24px OpenSans;
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: 1700px) and (min-height: 1000px) {
-//   // .header-question {
-//   //   right: 20px;
-
-//   //   & > h2 {
-//   //     font: 900 50px/65px Poppins;
-//   //   }
-//   // }
-//   .photo-wrapper {
-//     top: 250px;
-//     left: 20%;
-//  }
-// }
-
-// @media screen and (min-width: 1900px) and (min-height: 1000px) {
-//  .photo-wrapper {
-//    top: 300px;
-//  }
-// }
-
-@media screen and (max-height: 900px) {
-  .header-question {
-    top: 10%;
-    &> h2 {
-      font: 900 77px/65px Poppins;
-    }
-  }
-}
-
-@media screen and (max-height: 865px) {
-  .header-question {
-    top: 55px;
-    &>h2 {
-      font: 900 62px/65px Poppins;
-    }
-  }
-    
-
-  .main-block {       
-    top: 20%;
-    height: 70%;
-
-    &__info p {
-        font: 400 16px/26px OpenSans;
-      }
-  }
-
-  .photo-wrapper {
-    top: 28%;
-    left: 18%;
-    width: 30%;
-  }
 }
 
 
-
-@media screen and (max-width: 1500px) { 
-  .photo-wrapper {
-    &:before { width: 360px; }
-    &:after { left: 20px; }
-  }
-}
-@media screen and (max-width: 1300px) { 
-  .photo-wrapper {
-    top: 26%;
-    left: 13%;
-    width: 35%;
-  }
-}
-
-@media screen and (max-width: 1200px) {           // 1024x768, 1152x864
-  .header-question {
-    right: 40px;
-    &>h2 {
-      font: 900 52px/65px Poppins;
-    }
-  }
-
-  .main-block {       
-    top: 20%;
-    width: 80%;
-    left: 17%;
-
-    &__info p {
-        font: 400 17px/25px OpenSans;
-      }
-  }
-
-  .photo-wrapper {
-    top: 28%;
-    // left: 22%;
-    left: 10%;
-    width: 32%;
-    height: 58%;
-
-    &:before { display: none; }
-    &:after { display: none; }
-  }
-}
 </style>
 

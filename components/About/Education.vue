@@ -56,13 +56,20 @@ export default {
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
 @import "~/assets/about.scss";
+@import "~/assets/media/about.scss";
 
 .studyPlace {
   padding: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
 
   &__name {
-    font: 600 18px/30px OpenSans;
+    // font: 600 18px/30px OpenSans;
     display: flex;
+  }
+  &__faculty {
+    font-weight: 400;
+    font-size: 0.9em;
   }
   &__link {
     margin: 5px;
@@ -72,7 +79,8 @@ export default {
     background: url("../../static/icons/link.svg") center center no-repeat;
   }
   &__period {
-    font: 300 14px/19px OpenSans;
+    font-size: 0.7em;
+    font-weight: 300;
     opacity: 0.7;
   }
 }

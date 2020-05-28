@@ -1,0 +1,141 @@
+
+@import "~/assets/_variables.scss";
+
+
+@media only screen and (min-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+  
+}
+@media only screen and (max-width: 1500px) {
+  
+}
+@media only screen and (max-width: 1300px) {
+  .info {
+		width: 700px!important;
+		height: 350px!important;
+		padding: 30px 50px!important;
+		&:before {
+			font: 900 38px/75px Poppins!important;
+		}
+	}
+	.phone,
+	.email,
+	.address {
+		width: 70%!important;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+  .info {
+		width: 600px!important;
+		height: 300px!important;
+		padding: 20px 10px 0px 10px!important;
+		&:before {
+			font: 900 33px/75px Poppins!important;
+		}
+	}
+	.phone,
+	.email,
+	.address {
+		font-size: 15px!important;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+  .info {
+		width: 500px!important;
+		height: 250px!important;
+		padding: 0px!important;
+		padding-top: 20px!important;
+		&:before {
+			// display: none!important;
+			font: 900 27px/85px Poppins!important;
+		}
+	}
+	.phone,
+	.email,
+	.address {
+		width: 80%!important;
+		font-size: 14px!important;
+	}
+	.links-wrapper .box {
+		margin: 15px 20px!important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    height: calc(100% - #{$column-size__small})!important;
+    padding: 0!important;
+  }
+  .contact-wrapper {
+    left: 0px!important;
+  }
+  .info {
+		width: 400px!important;
+		padding: 20px 20px 0px 20px!important;
+	}
+	.phone,
+	.email,
+	.address {
+		width: 100%!important;
+		font-size: 12px!important;
+	}
+	.soc-networks {
+		width: 100%!important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-container {
+    height: 100%!important;
+    padding: 0!important;
+  }
+  .phone > span,
+	.email > span,
+	.address > span{
+		display: none!important;
+	}
+	.phone,
+	.email,
+	.address {
+		width: 80%!important;
+		font-size: 11px!important;
+	}
+	.info {
+		width: 350px!important;
+		padding: 10px 10px 0px 10px!important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.contact-wrapper {
+		left: 0px!important;
+	}
+  .info {
+		&:before {
+			display: none!important;
+			font: 900 27px/85px Poppins!important;
+		}
+	}
+}
+@media only screen and (max-width: 375px) {
+  .info {
+		width: 100%!important;
+	}
+	.phone,
+	.email,
+	.address {
+		font-size: 10px!important;
+	}
+}
+@media only screen and (max-width: 350px) {
+  
+}
+
+@media only screen and (max-height: 900px) {
+  
+}

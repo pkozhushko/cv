@@ -6,6 +6,7 @@
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/layout.scss";
 
 .logo__wrapper {
   position: absolute;

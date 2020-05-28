@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/layout.scss";
 
 .aside-block__wrapper {
   z-index: 5;

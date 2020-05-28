@@ -2,6 +2,9 @@
   <div class="main-wrapper">
     <logo />
     <lines-effect />
+    <burger />
+
+    
     <share-links />
     <get-in-touch-btn />
     <shuffle-letter />
@@ -17,6 +20,7 @@ import ShareLinks from "~/components/ShareLinks.vue";
 import GetInTouchBtn from "~/components/GetInTouchBtn.vue";
 import ShuffleLetter from "~/components/ShuffleLetter.vue";
 import Navigation from "~/components/Navigation.vue";
+import Burger from "~/components/Burger.vue";
 
 export default {
   components: {
@@ -25,7 +29,8 @@ export default {
     Logo,
     GetInTouchBtn,
     ShuffleLetter,
-    Navigation
+    Navigation,
+    Burger
   }
 };
 </script>
@@ -67,32 +72,11 @@ ol {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background: $black;
+  position: relative;
 }
 
-.shuffle-letter__wrapper {
-  position: fixed;
-  top: 10px;
-  left: $column-size;
-  z-index: 10;
-  user-select: none;
 
-  & > span {
-    color: $white-second;
-    // opacity: 0.2;
-    font: 900 100px/150px Poppins;
-    text-transform: uppercase;
 
-    &:nth-child(-n + 2) {
-      color: $orange;
-      opacity: 0.2;
-    }
-  }
-}
-
-@media screen and ( max-width: 1500px ) {
-  .shuffle-letter__wrapper > span {
-    font: 900 70px/120px Poppins;
-  }
-}
 </style>
 

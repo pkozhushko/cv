@@ -1,32 +1,24 @@
 <template>
-  <div class="lines-effect__wrapper">
-    <div class="lines">
+  <div class="lines__wrapper">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
-    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 
-.lines-effect__wrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background: $black;
-}
-.lines {
+.lines__wrapper {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  overflow: hidden;
+  bottom: 0;
+  // width: 100vw;
+  // height: 100vh;
 
   .line {
     position: absolute;
@@ -93,7 +85,6 @@
   0% {
     top: -10%;
   }
-
   100% {
     top: 110%;
   }
@@ -103,7 +94,6 @@
   0% {
     top: 110%;
   }
-
   100% {
     top: -10%;
   }

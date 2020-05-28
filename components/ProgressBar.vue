@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/about.scss";
 
 .active {
   label {
@@ -41,10 +42,9 @@ export default {
   }
 }
 .progress-bar {
-	width: 100%;
-	label {
-		font: 400 15px/21px OpenSans;
-	}
+  width: 100%;
+  font-size: 15px;
+  // font: 400 15px/21px OpenSans;
   &>.info {
     justify-content: space-between;
     display: flex;

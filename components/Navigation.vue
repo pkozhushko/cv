@@ -1,6 +1,6 @@
 <template>
   <div class="navigation__wrapper">
-    <div class="links">
+    <!-- <div class="links"> -->
       <nuxt-link
         v-for="(option, i) in options"
         :key="i"
@@ -13,7 +13,7 @@
           @mouseleave="clearHoveredWord()"
         >{{ option.name }}</div>
       </nuxt-link>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -62,31 +62,27 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/layout.scss";
 
 .navigation__wrapper {
   z-index: 5;
-  width: calc(100% - 80px);
+  width: calc(100% - #{$column-size});
   position: absolute;
   bottom: 0;
   right: 0px;
-  height: 80px;
+  height: $column-size;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  font-size: 19px;
 }
 
-.links {
-  width: 50%;
-  display: flex;
-  align-items: center;
-
-  & > .link {
+.link {
     color: $gray-second;
-    font: 400 19px/29px OpenSans;
-    padding-left: 14px;
+    padding-left: 12px;
     position: relative;
     display: block;
-    margin-left: 80px;
+    margin: 0 50px;
     text-decoration: none;
     transition: $transition;
 
@@ -109,36 +105,13 @@ export default {
       }
     }
   }
-  & > .current {
+  .current {
     color: $white;
     &:before {
       background: $orange;
     }
   }
-}
 
-.text-block {
-  width: 500px;
-  height: 100%;
-  color: $orange;
-  opacity: 0.5;
-  font: 700 48px/80px OpenSans;
-  position: relative;
-  overflow: hidden;
-}
-.text {
-  position: absolute;
-  right: 100px;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: $transition;
-}
-
-.fade-enter,
-.fade-leave-to {
-  right: -100%;
-}
 
 @keyframes textclip {
   to {

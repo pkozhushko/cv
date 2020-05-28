@@ -20,11 +20,12 @@
 
       <!-- selected company -->
       <div class="company-block" v-else key="selectedCompany">
-        <div class="info">
-          <p class="name">{{selectedWork.name}}</p>
-          <p class="period">({{ selectedWork.period.from }} - {{ selectedWork.period.to }})</p>
-        </div>
+        
         <ul class="projects">
+          <div class="info">
+            <p class="name">{{selectedWork.name}}</p>
+            <p class="period">({{ selectedWork.period.from }} - {{ selectedWork.period.to }})</p>
+          </div>
           <span class="section">Projects:</span>
           <li class="project" v-for="project in selectedWork.projects" :key="project.id">
             <div class="project__name">{{ project.name }} </div><span class="project__description">({{ project.description }})</span>
@@ -99,28 +100,38 @@ export default {
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
 @import "~/assets/about.scss";
+@import "~/assets/media/about.scss";
+
 .company-block {
   width: 100%;
   height: 100%;
 }
 .info {
-  position: absolute;
-  right: 70px;
   z-index: 1;
   text-align: right;
+  float: right;
+  &:after {
+    clear: both;
+  }
 
   & > .name {
-    font: 900 40px/45px Poppins;
+    font-family: Poppins;
+    font-size: 40px;
     opacity: 0.2;
+  }
+  &>.period {
+    font-size: 15px;
   }
 }
 .technology {
+  font-size: 18px;
   margin-right: 10px;
 }
 .item {
   margin-bottom: 20px;
 }
 .workPlace {
+  font-size: 18px;
   position: relative;
   margin: 10px 0;
   display: flex;
@@ -138,7 +149,7 @@ export default {
   }
   &__name {
     opacity: 0.7;
-    font: 400 18px/20px OpenSans;
+    // font: 400 18px/20px OpenSans;
     letter-spacing: 0.5px;
     position: relative;
     width: min-content;
@@ -160,10 +171,12 @@ export default {
     }
   }
   &__period {
+    line-height: 24px;
+    font-size: 0.7em;
     width: 180px;
     text-align: center;
     color: #fff;
-    font: 300 14px/20px OpenSans;
+    // font: 300 14px/20px OpenSans;
     opacity: 1;
     padding: 0px 20px;
   }
@@ -174,10 +187,10 @@ export default {
   }
 .project {
   margin: 5px 0px;
+  font-size: 18px;
 
   &__name {
     padding-left: 12px;
-    font: 400 18px/20px OpenSans;
     display: flex;
     position: relative;
     width: min-content;
@@ -198,13 +211,14 @@ export default {
   }
   &__description {
     font: 300 14px/20px OpenSans;
+    font-weight: 300;
     letter-spacing: 0.2px;
     opacity: 0.8;
     padding: 0px 10px;
   }
 }
 .section {
-  font: 400 16px/25px OpenSans;
+  font: 500 16px/25px OpenSans;
   opacity: 0.5;
 }
 
@@ -212,9 +226,8 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 20px;
+  height: 24px;
   color: $gray-second;
-  font: 400 14px/25px OpenSans;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

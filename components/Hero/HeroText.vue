@@ -11,10 +11,13 @@
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
+@import "~/assets/media/hero.scss";
 
 .hero-text__wrapper {
   color: $white;
-  font: 900 47px/72px Poppins;
+  font-family: Poppins;
+  font-size: 47px;
+  line-height: 1.5;
   position: absolute;
   bottom: 35%;
   left: 20%;
@@ -29,10 +32,5 @@
   }
 }
 
-@media screen and ( max-width: 1450px ) {
-  .hero-text__wrapper {
-    font: 900 37px/50px Poppins;
-  }
-}
 </style>
 

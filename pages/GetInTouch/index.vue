@@ -1,6 +1,6 @@
 <template>
   <section class="container" :class="{ 'container-disabled' : showModal || showPreloader }">
-    <div class="wrapp">
+    <!-- <div class="wrapp"> -->
       <div class="title">Message <span>me</span></div>
         <form
           @submit.prevent="sendMessage"
@@ -19,7 +19,9 @@
               @blur="validate('name')"
               @focus="unvalidate('name')"
             />
-            <div class="icon name" :class="{ 'icon__active' : userData.name }"></div>
+            <div class="icon" :class="{ 'icon__active' : userData.name }">
+              <div class="name"></div>
+            </div>
             <span class="floating-label" v-show="!userData.name">Name</span>
           </div>
 
@@ -35,7 +37,9 @@
               @focus="unvalidate('email')"
               @blur="validate('email')"
             />
-            <div class="icon email" :class="{ 'icon__active' : userData.email }"></div>
+            <div class="icon" :class="{ 'icon__active' : userData.email }">
+              <div class="email"></div>
+            </div>
             <div class="floating-label" v-show="!userData.email">Email</div>
           </div>
 
@@ -50,7 +54,9 @@
               @focus="unvalidate('message')"
               @blur="validate('message')"
             ></textarea>
-            <div class="icon message" :class="{ 'icon__active' : userData.message }"></div>
+            <div class="icon" :class="{ 'icon__active' : userData.message }">
+              <div class="message"></div>
+            </div>
             <span class="floating-label" v-show="!userData.message">Message</span>
           </div>
           <button type="submit" class="btn">Send</button>
@@ -66,7 +72,7 @@
           <h4 class="modal-text">Your message was not sent.</h4>
           <h2 class="modal-error">Please try again!</h2>
         </modal>
-    </div>
+    <!-- </div> -->
     <div class="dotted"></div>
   </section>
 </template>
@@ -230,6 +236,7 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
+@import "~/assets/media/getInTouch.scss";
 
 .container {
   position: absolute;
@@ -248,7 +255,10 @@ export default {
     position: absolute;
     top: 510px;
     left: 60%;
-    font: 900 92px/65px Poppins;
+    // font: 900 92px/65px Poppins;
+    font-family: Poppins;
+    font-size: 92px;
+    line-height: 0.6;
     letter-spacing: -4px;
     color: #fff;
     opacity: 0.8;
@@ -272,6 +282,8 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 20;
+  font-size: 16px;
+  font-weight: 300;
 
   & > .field {
     position: relative;
@@ -283,7 +295,7 @@ export default {
       left: 20px;
       padding-left: 25px;
       color: $warning;
-      font: 400 13px/21px OpenSans;
+      font-size: 14px;
 
       &::after {
         content: "";
@@ -307,8 +319,9 @@ export default {
   top: 10px;
   transition: $transition;
   color: $white;
-  padding-left: 40px;
-  font: 400 14px/30px OpenSans;
+  padding-left: 45px;
+  font: inherit;
+  line-height: 1.75;
 }
 
 .icon {
@@ -320,20 +333,25 @@ export default {
   transition: $transition;
 }
 .name {
-  background: url("../../static/icons/person.svg") center center no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url("~static/icons/person.svg") center center no-repeat;
 }
 .email {
-  background: url("../../static/icons/email.svg") center center no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url("~static/icons/email.svg") center center no-repeat;
 }
 .message {
-  background: url("../../static/icons/message.svg") center center no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url("~static/icons/message.svg") center center no-repeat;
 }
 
 .form-control:focus ~ .icon,
 .icon__active {
   position: absolute;
   left: -50px;
-  font-size: 12px;
   z-index: 20;
 }
 .form-control:focus ~ .floating-label {
@@ -357,7 +375,8 @@ export default {
   box-sizing: border-box;
   transition: $transition;
   position: relative;
-  font: 400 15px/30px OpenSans;
+  font: inherit;
+  line-height: 1.75;
 }
 
 .not-valid {
@@ -371,7 +390,6 @@ export default {
 .btn {
   width: 270px;
   margin: 0 auto;
-  // background: $gray;
 }
 
 .dotted {
@@ -448,32 +466,32 @@ export default {
 
 
 
-@media screen and ( max-width: 1450px ) {
-  .form-wrapper {
-    left: 20%;
-    top: 170px;
-    width: 470px;
-  }
-  .dotted {
-    height: 400px;
-    right: 10%;
-  }
-  .title {
-    top: 400px;
-    left: 62%;
-    font: 900 72px/65px Poppins;
-  }
-}
-@media screen and ( max-width: 1450px ) and ( min-height: 1000px) {
-  .form-wrapper {
-    top: 300px;
-  }
-}
+// @media screen and ( max-width: 1450px ) {
+//   .form-wrapper {
+//     left: 20%;
+//     top: 170px;
+//     width: 470px;
+//   }
+//   .dotted {
+//     height: 400px;
+//     right: 10%;
+//   }
+//   .title {
+//     top: 400px;
+//     left: 62%;
+//     font: 900 72px/65px Poppins;
+//   }
+// }
+// @media screen and ( max-width: 1450px ) and ( min-height: 1000px) {
+//   .form-wrapper {
+//     top: 300px;
+//   }
+// }
 
-@media screen and ( max-width: 1024px) {
-  .form-wrapper {
-    left: 13%;
-  }
-}
+// @media screen and ( max-width: 1024px) {
+//   .form-wrapper {
+//     left: 13%;
+//   }
+// }
 </style>
 

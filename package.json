@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-burger-menu": "^2.0.5"
   },
   "devDependencies": {
     "image-webpack-loader": "^6.0.0",

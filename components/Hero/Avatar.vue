@@ -7,6 +7,7 @@
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/hero.scss";
 
 .avatar__wrapper {
   position: absolute;
@@ -21,21 +22,11 @@
     background-image: url("./../../static/icons/main.jpg");
     background-size: cover;
     background-position: 50% 50%;
-    filter: brightness(80%);
+    filter: opacity(75%)!important;
+    // filter: brightness(80%);
   }
 }
 
-@media screen and ( max-width: 1500px ) {
-  .avatar__wrapper {
-    width: 60vw;
-  }
-}
-
-@media screen and (max-width: 1700px) {
- .avatar__wrapper {
-    width: 65vw;
-  }
-}
 
 </style>
 

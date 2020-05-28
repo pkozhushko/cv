@@ -1,6 +1,6 @@
 <template>
   <div class="shuffle-letter__wrapper">
-    <span v-for="(letter, i) in htmlWord" :key="i">
+    <span class="letter" v-for="(letter, i) in htmlWord" :key="i">
       {{letter}}
     </span>
   </div>
@@ -68,6 +68,35 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import "~/assets/_variables.scss";
+@import "~/assets/media/layout.scss";
+
+.shuffle-letter__wrapper {
+  position: absolute;
+  top: 10px;
+  left: $column-size;
+  z-index: 10;
+  user-select: none;
+  color: $white-second;
+}
+
+
+.letter {
+    color: inherit;
+    font-family: Poppins;
+    font-size: 100px;
+    line-height: 1.75;
+    text-transform: uppercase;
+
+    &:nth-child(-n + 2) {
+      color: $orange;
+      opacity: 0.2;
+    }
+  }
+
+</style>
 
 
 

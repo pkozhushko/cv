@@ -1,0 +1,390 @@
+
+@import "~/assets/_variables.scss";
+
+
+@media only screen and (min-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+  .header-question {
+    top: 85px!important;
+    font-size: 45px!important;
+    max-width: 750px!important;
+  }
+  .main-block {
+    // left: 27%!important;
+    // padding-left: 25%!important;
+  }
+  .main-block__info .text {
+    font-size: 17px !important;
+  }
+
+  .photo-wrapper {
+    width: 28%!important;
+    left: 18%!important;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .photo-wrapper {
+    &:before {
+      letter-spacing: 10px!important;
+      width: 320px!important;
+      font-size: 12px!important;
+    }
+    &:after {
+      font-size: 55px!important;
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .header-question {
+    top: 100px!important;
+    font-size: 40px!important;
+    max-width: 600px!important;
+  }
+  .photo-wrapper {
+    width: 35%!important;
+    left: 11%!important;
+
+    &:before {
+      letter-spacing: 8px!important;
+      width: 280px!important;
+      font-size: 12px!important;
+    }
+    &:after {
+      font-size: 50px!important;
+    }
+  }
+}
+//======================================
+
+/* Large Devices, Wide Screens */
+/* MD-MEDIUM (993-1200)*/
+@media only screen and (max-width: 1200px) {
+  .photo-wrapper {
+    // width: 35%!important;
+    // left: 12%!important;
+    width: 30%!important;
+    top: 28%!important;
+    height: 55%!important;
+  }
+
+  .main-block {
+    left: 25%!important;
+    // padding-left: 25%!important;
+  }
+  .main-block__info {
+    padding: 60px 40px 0px 0px!important;
+  }
+  .main-block__info .text{
+    font-size: 16px !important;
+  }
+  .buttons {
+    font-size: 15px!important;
+  }
+  .download-btn,
+  .message-btn {
+    &:before{
+      padding: 10px 20px !important;
+    }
+  }
+
+  .info .name {
+    font-size: 30px!important;
+  }
+  .btn-back {
+    left: 0px!important;
+  }
+}
+
+//======================================
+
+/* Medium Devices, Desktops */
+/* SM-SMALL (769-992)*/
+@media only screen and (max-width: 992px) {
+  .header-question {
+    font-size: 35px!important;
+    top: 120px!important;
+  }
+  .download-btn,
+  .message-btn {
+    height: 40px !important;
+    
+    &:before{
+      padding: 5px 10px !important;
+      font-size: 14px!important;
+      line-height: 30px !important;
+    }
+  }
+  .items {
+    margin-top: 60px!important;
+  }
+  .item {
+    font-size: 30px!important;
+    line-height: 40px!important;
+  }
+  .photo-wrapper {
+    width: 32%!important;
+    top: 37%!important;
+    height: 45%!important;
+    &:before, &:after {
+      display: none!important;
+    }
+  }
+  .studyPlace, .workPlace, .project, .technology {
+    font-size: 15px!important;
+  }
+  .btn-back {
+    
+    width: 120px!important;
+    height: 40px!important;;
+    &:before {
+      padding: 5px 10px !important;
+    }
+  }
+}
+
+//======================================
+
+/* Small Devices, Tablets */
+/* XS-EXTRA-SMALL (481-768)*/
+@media only screen and (max-width: 768px) {
+  .header-question {
+    top: 85px!important;
+  }
+  .photo-wrapper {
+    width: 35%!important;
+    top: 28%!important;
+    height: 50%!important;
+    &:before, &:after {
+      display: none!important;
+    }
+  }
+  .main-block {
+    top: 25%!important;
+    left: 28%!important;
+    height: 60%!important;
+  }
+  .main-block__info .text{
+    font-size: 12px !important;
+  }
+  .items {
+    margin-top: 40px!important;
+  }
+  .item {
+    font-size: 27px!important;
+  }
+  .item > span {
+    font-size: 27px!important;
+  }
+  .download-btn,
+  .message-btn {
+    &:before{
+      font-size: 11px!important;
+    }
+  }
+  .project, .technology, .studyPlace, .workPlace {
+    font-size: 12px!important;
+  }
+  .btn-back {
+    bottom: 30px!important;
+  }
+  .btn-paginate-back {
+    right: 50px!important;
+  }
+  .btn-paginate-next {
+    right: 30px!important;
+  }
+  .btn-paginate-next, .btn-paginate-back {
+    width: 12px!important;
+    height: 12px!important;
+  }
+  .main-block__info {
+    padding-right: 10px !important;
+  }
+  .progress-bar {
+    font-size: 12px!important;
+  }
+  .project__description {
+    display: none!important;
+  }
+  .info .name {
+    font-size: 20px !important;
+  }
+  .info .period {
+    font-size: 12px !important;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header-question {
+    top: 55px!important;
+    right: 0px!important;
+    font-size: 30px!important;
+  }
+  .photo-wrapper {
+    top: 25%!important;
+    left: 7%!important;
+  }
+  .main-block {
+    top: 20%!important;
+    left: 25%!important;
+    height: 60%!important;
+  }
+  .main-block__info {
+    padding-right: 10px !important;
+  }
+  .main-block__info .text{
+    font-size: 11px !important;
+  }
+  .download-btn,
+  .message-btn {
+    height: 40px !important;
+    
+    &:before{
+      padding: 5px !important;
+      font-size: 9px!important;
+      line-height: 30px !important;
+    }
+  }
+  .btn {
+    margin: 0 5px!important;
+  }
+  .item {
+    font-size: 20px!important;
+    line-height: 30px!important;
+    &:after {
+      bottom: 9px!important;
+      left: -8px!important;
+      width: 12px!important;
+    }
+  }
+  .item > span {
+    font-size: 20px!important;
+  }
+  .project, .technology, .studyPlace, .workPlace {
+    font-size: 12px!important;
+  }
+}
+//======================================
+
+/* Extra Small Devices, Phones */
+/* XS-OMG (321-480)*/
+@media only screen and (max-width: 480px) {
+  .header-question {
+    font-size: 25px!important;
+  }
+  .photo-wrapper {
+    left: 5%!important;
+  }
+  .main-block__info .text{
+    font-size: 10px !important;
+  }
+  .item {
+    font-size: 17px!important;
+    line-height: 1.5!important;
+  }
+  .item span {
+    font-size: 17px!important;
+  }
+  .workPlace__period {
+    display: none!important;
+  }
+  .btn-back {
+    padding: 0!important;
+    font-size: 13px!important;
+    width: 80px !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .header-question {
+    top: 75px!important;
+    right: 18px!important;
+    font-size: 23px!important;
+    max-width: 50%!important;
+    padding-left: 0!important;
+
+    &>h2 {
+      letter-spacing: -2px!important;
+    }
+  }
+  .photo-wrapper {
+    left: 7%!important;
+    top: 10%!important;
+    height: 30%!important;
+  }
+  .main-block {
+    top: 37% !important;
+    width: 90% !important;
+    height: 50%!important;
+    left: 5%!important;
+  }
+  .main-block__info {
+    width: 100% !important;
+    padding: 10px!important;
+  }
+  .item {
+    font-size: 17px!important;
+    line-height: 1.5!important;
+  }
+  .item span {
+    font-size: 17px!important;
+  }
+  .workPlace__period {
+    display: none!important;
+  }
+  .btn-back {
+    padding: 0!important;
+    font-size: 13px!important;
+    width: 80px !important;
+  }
+  .btn-paginate-next, .btn-paginate-back {
+    bottom: 50px!important;
+  }
+  .project {
+    margin: 0!important;
+  }
+  .skills-wrapper {
+    height: 100px!important;
+  }
+  .progress-bar, .studyPlace {
+     font-size: 9px!important;
+  }
+  .studyPlace__link {
+    display: none!important;;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .header-question {
+    top: 55px!important;
+    font-size: 20px!important;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  // .project__description {
+  //   display: none!important;
+  // }
+  .main-block__info {
+    padding-top: 30px!important;
+  }
+  .main-block__info .text{
+    // font-size: 15px !important;
+  }
+  // .header-question {
+  //   font-size: 40px!important;
+  //   max-width: 700px!important;
+  //   top: 100px!important;
+  //   right: 50px!important;
+  // }
+  .section, .technology {
+    display: none!important;
+  }
+  .projects .section {
+    font-size: 11px;
+    display: block!important;
+  }
+  
+}

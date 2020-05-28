@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container contact-container">
     <client-only>
       <vue-particles
         color="#dedede"
@@ -76,16 +76,20 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
+@import "~/assets/media/contact.scss";
 
 .container {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  width: 100%;
-  height: calc(100% - 80px);
+  
   overflow: hidden;
   z-index: 1;
+}
+.contact-container {
+  width: 100%;
+  height: calc(100% - 80px);
   padding: $column-size;
 }
 .particles {
@@ -122,9 +126,11 @@ export default {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   color: #fff;
   position: relative;
+  padding: 50px 70px;
 
   &:before {
     content: "petro.kozhushko";
@@ -148,24 +154,28 @@ export default {
 .phone,
 .email,
 .address {
-  margin-left: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
-  padding: 30px 45px;
-  width: 500px;
+  width: 60%;
   height: 30px;
   line-height: 30px;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
   &:before {
     content: "";
     display: block;
-    position: absolute;
-    left: 0px;
     width: 30px;
     height: 30px;
+    margin: 0 10px;
   }
   & > span {
     display: inline-block;
     width: 20%;
-    font: 300 15px/20px OpenSans;
+    // font: 300 15px/20px OpenSans;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -173,7 +183,8 @@ export default {
     color: inherit;
     text-decoration: none;
     transition: $transition;
-    font: 500 16px/20px OpenSans;
+    // font: 500 16px/20px OpenSans;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
@@ -200,8 +211,8 @@ export default {
 }
 
 .soc-networks {
-  margin-left: 30%;
-  margin-top: 50px;
+  // margin-left: 30%;
+  // margin-top: 50px;
   border-top: 1px solid $gray-second;
   position: relative;
   width: 40%;
@@ -281,14 +292,14 @@ export default {
   }
 }
 
-@media screen and (max-width: 1450px) {
-  .info {
-    width: 650px;
-    height: 320px;
-    &:before {
-      font: 900 36px/45px Poppins;
-    }
-  }
-}
+// @media screen and (max-width: 1450px) {
+//   .info {
+//     width: 650px;
+//     height: 320px;
+//     &:before {
+//       font: 900 36px/45px Poppins;
+//     }
+//   }
+// }
 </style>
 

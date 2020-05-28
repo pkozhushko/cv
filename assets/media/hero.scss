@@ -1,0 +1,114 @@
+
+@import "~/assets/_variables.scss";
+
+
+@media only screen and (min-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+  .dotted { 
+    left: 24%!important;
+  }
+}
+
+//======================================
+
+/* Large Devices, Wide Screens */
+/* MD-MEDIUM (993-1200)*/
+@media only screen and (max-width: 1200px) {
+  .hero-text__wrapper {
+    font-size: 38px;
+    bottom: 35%;
+    left: 20%;
+    & > h2 {
+      padding-bottom: 10px!important;
+    }
+    & > .btn {
+      bottom: -80px !important;
+    }
+  }
+  .avatar__wrapper >.hero {
+    filter: opacity(55%)!important;
+    background-position: 40% 50%!important;
+  }
+}
+
+//======================================
+
+/* Medium Devices, Desktops */
+/* SM-SMALL (769-992)*/
+@media only screen and (max-width: 992px) {
+    .coordinates {
+      display: none;
+    }
+    .hero-text__wrapper {
+      font-size: 30px;
+      left: 17%;
+    }
+    .dotted { 
+      left: 22%!important;
+      height: 450px!important;
+      width: 600px!important;
+    }
+}
+
+//======================================
+
+/* Small Devices, Tablets */
+/* XS-EXTRA-SMALL (481-768)*/
+@media only screen and (max-width: 768px) {
+
+  .hero-text__wrapper {
+    padding: 0 20px;
+  }
+  .dotted { 
+    left: 24%!important;
+    width: 450px!important;
+  }
+  .avatar__wrapper {
+    width: 100vw;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .avatar__wrapper {
+    display: none;
+  }
+  .hero-text__wrapper {
+    bottom: 40%;
+    left: 75px !important;
+  }
+  .dotted { 
+    bottom: 25%!important;
+    left: 24%!important;
+    height: 40%!important;
+    width: 350px!important;
+  }
+}
+//======================================
+
+/* Extra Small Devices, Phones */
+/* XS-OMG (321-480)*/
+@media only screen and (max-width: 480px) {
+  .dotted { 
+    width: 60%!important;
+  }
+  .hero-text__wrapper {
+    font-size: 22px;
+    line-height: 1.8;
+    left: 20px !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .hero-text__wrapper {
+    font-size: 20px;
+    line-height: 1.55;
+    left: 10px !important;
+  }
+  .btn {
+    font-size: 13px;
+    padding: 7px 30px;
+  }
+}

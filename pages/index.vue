@@ -8,14 +8,14 @@
       <div class="city">based in {{ city }}</div>
     </div>
     <avatar class="animation-second" />
-    <hero-text class="animation-first" />
+    <hero-text  />
     <div class="dotted animation-first"></div>
   </section>
 </template>
 
 <script>
-import Avatar from '~/components/Hero/Avatar.vue'
-import HeroText from '~/components/Hero/HeroText.vue'
+import Avatar from "~/components/Hero/Avatar.vue";
+import HeroText from "~/components/Hero/HeroText.vue";
 
 export default {
   components: {
@@ -24,31 +24,23 @@ export default {
   },
   data() {
     return {
-      city: 'Lviv',
+      city: "Lviv",
       coordinates: {
         x: "49.8382600",
         y: "24.0232400"
       }
-    }
+    };
   },
   mounted() {
-    this.$bus.$emit('shuffle', '//hero')
+    this.$bus.$emit("shuffle", "//hero");
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/_variables.scss';
+@import "~/assets/_variables.scss";
+@import "~/assets/media/hero.scss";
 
-.container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  overflow: hidden!important;
-}
 .coordinates {
   padding-left: 50px;
   position: absolute;
@@ -58,12 +50,12 @@ export default {
   opacity: 0.8;
   font: 500 13px/20px OpenSans;
   letter-spacing: 9px;
-  z-index: 5;  
+  z-index: 5;
   height: 40px;
-  overflow-y: hidden;  
+  overflow-y: hidden;
 
   &:before {
-    content: '';
+    content: "";
     width: 20px;
     height: 1px;
     background: $orange;
@@ -73,7 +65,7 @@ export default {
     transition: $transition;
   }
 
-  &:hover:before{
+  &:hover:before {
     width: 30px;
   }
 
@@ -84,79 +76,75 @@ export default {
   &:hover .coordinates__text {
     margin-top: -40px;
   }
-  &>.city {
+  & > .city {
     line-height: 40px;
   }
-  
 }
 .dotted {
-    position: absolute;
-    bottom: 130px; 
-    left: 500px;
+  position: absolute;
+  bottom: 130px;
+  left: 500px;
 
-    z-index: 5;
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(236, 236, 233, 0.3), rgba(236, 236, 233, 0.3) 0.5px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(236, 236, 233, 0.2), rgba(236, 236, 233, 0.2) 0.5px, transparent 1px, transparent 100%);
-    -webkit-background-size: 3px 3px;
-    background-size: 10px 10px;
-    
-    width: 900px;
-    height: 550px;
+  z-index: 5;
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    rgba(236, 236, 233, 0.3),
+    rgba(236, 236, 233, 0.3) 0.5px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-image: repeating-radial-gradient(
+    center center,
+    rgba(236, 236, 233, 0.2),
+    rgba(236, 236, 233, 0.2) 0.5px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 10px 10px;
+
+  width: 900px;
+  height: 550px;
+}
+
+@keyframes fadeIn {
+  from {
+    left: 100%;
   }
-
-
-
-@-webkit-keyframes fadeIn { from { left: 100%; } to { left:500px; } }
-@-moz-keyframes fadeIn { from { left: 100%; } to { left:500px; } }
-@keyframes fadeIn { from { left: 100%; } to { left:500px; } }
+  to {
+    left: 500px;
+  }
+}
 
 .fade-in {
-  left: 100%;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+  left: 100%;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 
 .fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
 .fade-in.two {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay:1.2s;
   animation-delay: 1.2s;
 }
 
 .fade-in.three {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }
 
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+.slide-fade-enter,
+.slide-fade-leave-to {
   transform: translateX(10px);
   opacity: 0;
 }
-
-
-
 
 @keyframes slideInFromRight {
   0% {
@@ -169,24 +157,14 @@ export default {
   }
 }
 
-.animation-first {  
-  /* This section calls the slideInFromLeft animation we defined above */
+.animation-first {
   animation: 0.6s ease-out 0s 1 slideInFromRight;
 }
-.animation-second {  
-  /* This section calls the slideInFromLeft animation we defined above */
+.animation-second {
   opacity: 0;
-  animation: 0.5s ease-out 0.3s 1 slideInFromRight;
-  animation-fill-mode:forwards;
+  animation: 0.6s ease-out 0.3s 1 slideInFromRight;
+  animation-fill-mode: forwards;
 }
 
-
-@media screen and ( max-width: 1450px ) {
-  .dotted {
-    width: 650px;
-    height: 450px;
-    left: 400px;
-  }
-}
 </style>
 

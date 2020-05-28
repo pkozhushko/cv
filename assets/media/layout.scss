@@ -1,0 +1,115 @@
+
+@import "~/assets/_variables.scss";
+
+
+@media only screen and (min-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+  .shuffle-letter__wrapper .letter {
+    font-size: 90px;
+  }
+}
+
+//======================================
+
+/* Large Devices, Wide Screens */
+/* MD-MEDIUM (993-1200)*/
+@media only screen and (max-width: 1200px) {
+  .shuffle-letter__wrapper .letter {
+    font-size: 70px;
+  }
+}
+
+//======================================
+
+/* Medium Devices, Desktops */
+/* SM-SMALL (769-992)*/
+@media only screen and (max-width: 992px) {
+  .shuffle-letter__wrapper .letter {
+			font-size: 60px;
+  }
+}
+
+//======================================
+
+/* Small Devices, Tablets */
+/* XS-EXTRA-SMALL (481-768)*/
+@media only screen and (max-width: 768px) {
+  .shuffle-letter__wrapper {
+		left: auto !important;
+    right: 75px !important;
+		&>.letter {
+			font-size: 50px;
+		}
+  }
+
+  .aside-block__wrapper {
+    display: none!important;
+  }
+
+  .get-in-touch__btn, .logo__wrapper {
+    width: $column-size__small!important;
+    height: $column-size__small!important;
+  }
+  .logo__wrapper .logo {
+    width: 25px!important;
+    height: 25px!important;
+  }
+
+  .navigation__wrapper {
+    width: calc(100% - #{$column-size__small})!important;
+    height: $column-size__small!important;
+    font-size: 17px!important;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navigation__wrapper, .get-in-touch__btn {
+    display: none!important;
+  }
+  .burger__wrapper{
+    display: flex!important;
+  }
+
+  .shuffle-letter__wrapper {
+    top: auto!important;
+    bottom: 25px!important;
+    left: 25px !important;
+		// &>.letter {
+		// 	line-height: 1.5;
+		// }
+  }
+  .shuffle-letter__wrapper .letter {
+    font-size: 22px;
+  }
+  
+}
+//======================================
+
+/* Extra Small Devices, Phones */
+/* XS-OMG (321-480)*/
+@media only screen and (max-width: 480px) {
+  
+}
+
+
+@media only screen and (max-width: 375px) {
+  .shuffle-letter__wrapper {
+    top: auto!important;
+    bottom: 5px!important;
+  }
+  .shuffle-letter__wrapper .letter {
+    font-size: 22px;
+  }
+  .shuffle-letter__wrapper .letter {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .shuffle-letter__wrapper .letter {
+    font-size: 17px;
+  }
+}
