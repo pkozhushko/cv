@@ -48,7 +48,7 @@ export default {
   right: $column-size;
   color: #fff;
   opacity: 0.8;
-  font: 500 13px/20px OpenSans;
+  font-size: 13px;
   letter-spacing: 9px;
   z-index: 5;
   height: 40px;

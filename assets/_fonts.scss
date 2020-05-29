@@ -1,47 +1,51 @@
 @font-face{
+  font-display: swap;
   font-family: 'OpenSans';
   src: url('~static/fonts/OpenSansLight.ttf') format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face{
+  font-display: swap;
   font-family: 'OpenSans';
   src: url('~static/fonts/OpenSansRegular.ttf') format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face{
+  font-display: swap;
   font-family: 'OpenSans';
   src: url('~static/fonts/OpenSansSemiBold.ttf') format("truetype");
   font-weight: 500;
   font-style: normal;
 }
-@font-face{
-  font-family: 'OpenSans';
-  src: url('~static/fonts/OpenSansBold.ttf') format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face{
-  font-family: 'OpenSans';
-  src: url('~static/fonts/OpenSansExtraBold.ttf') format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+// @font-face{
+//   font-family: 'OpenSans';
+//   src: url('~static/fonts/OpenSansBold.ttf') format("truetype");
+//   font-weight: 600;
+//   font-style: normal;
+// }
+// @font-face{
+//   font-family: 'OpenSans';
+//   src: url('~static/fonts/OpenSansExtraBold.ttf') format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
-@font-face{
-  font-family: 'OpenSans';
-  src: url('~static/fonts/OpenSansLightItalic.ttf') format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
+// @font-face{
+//   font-display: swap;
+//   font-family: 'OpenSans';
+//   src: url('~static/fonts/OpenSansLightItalic.ttf') format("truetype");
+//   font-weight: 300;
+//   font-style: italic;
+// }
 
-@font-face{
-  font-family: 'NunitoSans';
-  src: url('~static/fonts/NunitoSans-Black.ttf') format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+// @font-face{
+//   font-family: 'NunitoSans';
+//   src: url('~static/fonts/NunitoSans-Black.ttf') format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
 @font-face{
   font-family: 'Poppins';

@@ -22,9 +22,11 @@
   justify-content: center;
   align-items: center;
 
-  &>h2 {
-      font: 900 130px/150px Poppins;
-      opacity: 0.6;
+  & > h2 {
+    font-family: Poppins;
+    font-size: 130px;
+    line-height: 150px;
+    opacity: 0.6;
   }
 }
 </style>

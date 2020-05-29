@@ -12,10 +12,6 @@
     font-size: 45px!important;
     max-width: 750px!important;
   }
-  .main-block {
-    // left: 27%!important;
-    // padding-left: 25%!important;
-  }
   .main-block__info .text {
     font-size: 17px !important;
   }
@@ -31,9 +27,10 @@
       letter-spacing: 10px!important;
       width: 320px!important;
       font-size: 12px!important;
+      line-height: 1.75 !important;
     }
     &:after {
-      font-size: 55px!important;
+      font-size: 35px!important;
     }
   }
 }
@@ -51,9 +48,6 @@
       letter-spacing: 8px!important;
       width: 280px!important;
       font-size: 12px!important;
-    }
-    &:after {
-      font-size: 50px!important;
     }
   }
 }
@@ -103,6 +97,9 @@
 /* Medium Devices, Desktops */
 /* SM-SMALL (769-992)*/
 @media only screen and (max-width: 992px) {
+  .image {
+    background-image: url("~static/icons/avatarMain992px.jpg")!important;
+  }
   .header-question {
     font-size: 35px!important;
     top: 120px!important;
@@ -126,8 +123,10 @@
   }
   .photo-wrapper {
     width: 32%!important;
+    max-width: 394px!important;
     top: 37%!important;
     height: 45%!important;
+    max-height: 450px!important;
     &:before, &:after {
       display: none!important;
     }
@@ -136,7 +135,6 @@
     font-size: 15px!important;
   }
   .btn-back {
-    
     width: 120px!important;
     height: 40px!important;;
     &:before {
@@ -273,6 +271,9 @@
 /* Extra Small Devices, Phones */
 /* XS-OMG (321-480)*/
 @media only screen and (max-width: 480px) {
+  .image {
+    background-image: url("~static/icons/avatarMobile.jpg")!important;
+  }
   .header-question {
     font-size: 25px!important;
   }
@@ -300,7 +301,7 @@
 }
 @media only screen and (max-width: 375px) {
   .header-question {
-    top: 75px!important;
+    top: 65px!important;
     right: 18px!important;
     font-size: 23px!important;
     max-width: 50%!important;

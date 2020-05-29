@@ -3,8 +3,6 @@
     <logo />
     <lines-effect />
     <burger />
-
-    
     <share-links />
     <get-in-touch-btn />
     <shuffle-letter />

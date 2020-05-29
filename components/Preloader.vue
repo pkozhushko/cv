@@ -30,6 +30,7 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
+@import "~/assets/media/getInTouch.scss";
 
 .preloader-wrapper {
   position: fixed;
@@ -48,8 +49,9 @@ export default {
   display: block;
   position: absolute;
   top: 30vh;
-  left: 240px;
-  font: 300 22px/30px OpenSans;
+  left: 15%;
+  font-size: 22px;
+  font-weight: 300;
   letter-spacing: 12px;
   color: #fff;
   overflow: hidden;

@@ -39,6 +39,9 @@
 /* Medium Devices, Desktops */
 /* SM-SMALL (769-992)*/
 @media only screen and (max-width: 992px) {
+  .hero {
+    background-image: url("~static/icons/main992px.jpg")!important;
+  }
     .coordinates {
       display: none;
     }

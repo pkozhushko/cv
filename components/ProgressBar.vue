@@ -44,12 +44,10 @@ export default {
 .progress-bar {
   width: 100%;
   font-size: 15px;
-  // font: 400 15px/21px OpenSans;
   &>.info {
     justify-content: space-between;
     display: flex;
 		color: #fff;
-		// opacity: 0.8;
   }
   .background-bar {
     background: #ccc;

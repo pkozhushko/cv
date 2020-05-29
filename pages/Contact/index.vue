@@ -139,7 +139,9 @@ export default {
     top: 0px;
     left: -70px;
     display: block;
-    font: 900 45px/55px Poppins;
+    font-family: Poppins;
+    font-size: 45px;
+    line-height: 1.25;
     color: $white-second;
     width: min-content;
     transform: rotate(-90deg);
@@ -175,7 +177,6 @@ export default {
   & > span {
     display: inline-block;
     width: 20%;
-    // font: 300 15px/20px OpenSans;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -183,7 +184,6 @@ export default {
     color: inherit;
     text-decoration: none;
     transition: $transition;
-    // font: 500 16px/20px OpenSans;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -291,15 +291,5 @@ export default {
     left: -70px;
   }
 }
-
-// @media screen and (max-width: 1450px) {
-//   .info {
-//     width: 650px;
-//     height: 320px;
-//     &:before {
-//       font: 900 36px/45px Poppins;
-//     }
-//   }
-// }
 </style>
 

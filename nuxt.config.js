@@ -1,6 +1,7 @@
 
 export default {
   mode: 'spa',
+  cache: true,
   router: {
     base: '/cv/',
     mode: 'hash',

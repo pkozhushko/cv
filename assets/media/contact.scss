@@ -18,7 +18,8 @@
 		height: 350px!important;
 		padding: 30px 50px!important;
 		&:before {
-			font: 900 38px/75px Poppins!important;
+			font-size: 38px !important;
+			line-height: 2!important;
 		}
 	}
 	.phone,
@@ -34,7 +35,7 @@
 		height: 300px!important;
 		padding: 20px 10px 0px 10px!important;
 		&:before {
-			font: 900 33px/75px Poppins!important;
+			font-size: 33px !important;
 		}
 	}
 	.phone,
@@ -51,8 +52,8 @@
 		padding: 0px!important;
 		padding-top: 20px!important;
 		&:before {
-			// display: none!important;
-			font: 900 27px/85px Poppins!important;
+			font-size: 27px !important;
+			line-height: 3!important;
 		}
 	}
 	.phone,
@@ -118,7 +119,6 @@
   .info {
 		&:before {
 			display: none!important;
-			font: 900 27px/85px Poppins!important;
 		}
 	}
 }

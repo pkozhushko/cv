@@ -255,7 +255,6 @@ export default {
     position: absolute;
     top: 510px;
     left: 60%;
-    // font: 900 92px/65px Poppins;
     font-family: Poppins;
     font-size: 92px;
     line-height: 0.6;
@@ -288,6 +287,7 @@ export default {
   & > .field {
     position: relative;
     margin: 18px 0;
+    border-radius: 0px!important;
 
     & > .error-text {
       position: absolute;
@@ -463,35 +463,5 @@ export default {
   }
 }
 
-
-
-
-// @media screen and ( max-width: 1450px ) {
-//   .form-wrapper {
-//     left: 20%;
-//     top: 170px;
-//     width: 470px;
-//   }
-//   .dotted {
-//     height: 400px;
-//     right: 10%;
-//   }
-//   .title {
-//     top: 400px;
-//     left: 62%;
-//     font: 900 72px/65px Poppins;
-//   }
-// }
-// @media screen and ( max-width: 1450px ) and ( min-height: 1000px) {
-//   .form-wrapper {
-//     top: 300px;
-//   }
-// }
-
-// @media screen and ( max-width: 1024px) {
-//   .form-wrapper {
-//     left: 13%;
-//   }
-// }
 </style>
 

@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 @import "~/assets/main.scss";
+@import "~/assets/media/getInTouch.scss";
 
 .modal-wrapper {
   position: fixed;
@@ -77,19 +78,18 @@ export default {
   color: $white;
   opacity: 0.8;
   & > .modal-text {
-    font: 400 15px/19px OpenSans;
+    font-size: 15px;
+    font-weight: 300;
     padding-bottom: 15px;
   }
 
   & > .modal-success {
-    font: 700 33px/50px NunitoSans;
-    // color: $orange;
-    // opacity: 0.5;
+    font-family: Poppins;
+    letter-spacing: 1px;
   }
   & > .modal-error {
-    font: 700 33px/50px NunitoSans;
-    // color: $warning;
-    // opacity: 1;
+    font-family: Poppins;
+    letter-spacing: 1px;
   }
 }
 

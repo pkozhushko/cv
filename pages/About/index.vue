@@ -296,7 +296,8 @@ export default {
 
   &:before {
     content: "petro.kozhushko";
-    font: 400 15px/20px OpenSans;
+    font-size: 15px;
+    line-height: 1.25;
     text-align: right;
     letter-spacing: 12px;
     color: $white;
@@ -312,9 +313,11 @@ export default {
   &:after {
     content: "//";
     position: absolute;
-    top: 35px;
-    left: 25px;
-    font: 600 65px/40px OpenSans;
+    top: 28px;
+    left: 30px;
+    font-family: Poppins;
+    letter-spacing: 5px;
+    font-size: 40px;
     color: $orange;
     z-index: 2;
   }

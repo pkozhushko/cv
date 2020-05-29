@@ -76,6 +76,7 @@ export default {
   position: fixed;
   right: 0px;
   display: none;
+  font-family: Poppins;
 }
 .link  {
     white-space: nowrap;

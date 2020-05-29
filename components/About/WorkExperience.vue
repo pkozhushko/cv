@@ -149,7 +149,6 @@ export default {
   }
   &__name {
     opacity: 0.7;
-    // font: 400 18px/20px OpenSans;
     letter-spacing: 0.5px;
     position: relative;
     width: min-content;
@@ -176,7 +175,6 @@ export default {
     width: 180px;
     text-align: center;
     color: #fff;
-    // font: 300 14px/20px OpenSans;
     opacity: 1;
     padding: 0px 20px;
   }
@@ -210,7 +208,7 @@ export default {
     }
   }
   &__description {
-    font: 300 14px/20px OpenSans;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.2px;
     opacity: 0.8;
@@ -218,7 +216,7 @@ export default {
   }
 }
 .section {
-  font: 500 16px/25px OpenSans;
+  font-size: 16px;
   opacity: 0.5;
 }
 
@@ -241,7 +239,6 @@ export default {
   background: $gray;
   color: $gray-second;
   opacity: 1;
-  font: 400 14px/25px OpenSans;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: $transition;

@@ -61,18 +61,15 @@ export default {
 .studyPlace {
   padding: 10px 0;
   font-size: 18px;
-  font-weight: 600;
 
   &__name {
-    // font: 600 18px/30px OpenSans;
     display: flex;
   }
   &__faculty {
-    font-weight: 400;
     font-size: 0.9em;
   }
   &__link {
-    margin: 5px;
+    margin: 3px;
     display: block;
     width: 20px;
     height: 20px;
