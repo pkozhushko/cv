@@ -1,6 +1,5 @@
 <template>
   <section class="container" :class="{ 'container-disabled' : showModal || showPreloader }">
-    <!-- <div class="wrapp"> -->
       <div class="title">Message <span>me</span></div>
         <form
           @submit.prevent="sendMessage"
@@ -72,7 +71,6 @@
           <h4 class="modal-text">Your message was not sent.</h4>
           <h2 class="modal-error">Please try again!</h2>
         </modal>
-    <!-- </div> -->
     <div class="dotted"></div>
   </section>
 </template>
