@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "image-webpack-loader": "^6.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^8.0.2",
     "vue-particles": "^1.0.9"
